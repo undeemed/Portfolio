@@ -132,8 +132,8 @@ img {
 
 /* --- Header --- */
 #main-header {
-  background-color: rgba(44, 44, 49, 0.85); /* Slightly transparent */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  background-color: rgba(0, 0, 0, 0); /* Slightly transparent */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
   position: sticky;
   top: 0;
   left: 0;
@@ -146,9 +146,10 @@ img {
 
 #main-header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
+  text-align: center; 
 }
 
 .logo {
@@ -164,7 +165,8 @@ img {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* Use gap for spacing */
+  gap: 5rem; /* Use gap for spacing */
+  justify-content: center;
 }
 
 nav ul li a {
@@ -575,4 +577,28 @@ nav ul li a.active {
   .social-links a {
     font-size: 1.5rem;
   }
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* send video to back */
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* bring content in front of video */
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
